@@ -1,0 +1,16 @@
+targets:
+  $default:
+    builders:
+      json_serializable:json_serializable:
+        generate_for:
+          include:
+            - lib/**.cg.dart
+
+      copy_with_extension_gen:copy_with_extension_gen:
+        generate_for:
+          include:
+            - lib/**.cg.dart
+      freezed:freezed:
+        generate_for:
+          include:
+            - lib/**.cg.dart

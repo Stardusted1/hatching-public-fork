@@ -1,0 +1,17 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    - require_trailing_commas
+    - use_super_parameters
+    - always_declare_return_types
+    - always_use_package_imports
+    - avoid_empty_else
+    - prefer_void_to_null
+
+analyzer:
+  exclude:
+#    - "**/*.g.dart"
+#    - "**/*.freezed.dart"
+  errors:
+    invalid_annotation_target: ignore

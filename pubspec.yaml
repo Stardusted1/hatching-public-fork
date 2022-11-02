@@ -1,0 +1,63 @@
+name: hatching
+description: A new Flutter project.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  flutter_bloc: ^8.0.1
+  dio: ^4.0.4
+  easy_localization: ^3.0.0
+  material_floating_search_bar: ^0.3.7
+  flutter_svg: ^1.0.3
+  equatable: ^2.0.3
+  get: ^4.6.1
+  lottie: ^1.2.1
+  freezed_annotation: ^2.0.3
+  svg_path_parser: ^1.1.1
+  xml: ^6.1.0
+  mccounting_text: ^1.0.0
+  charts_flutter: ^0.12.0
+  font_awesome_flutter: ^10.1.0
+  flutter_icons: ^1.1.0
+  firebase_auth: ^3.6.3
+  cloud_firestore: ^3.4.6
+  uuid: ^3.0.6
+  share_plus: ^4.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+  build_runner: ^2.1.7
+  json_serializable: ^6.1.4
+  freezed: ^2.0.3+1
+  lakos: ^2.0.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/translations/
+    - assets/images/
+    - assets/images/icons/
+    - assets/animations/
+    - assets/
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-Regular.ttf
+          weight: 400

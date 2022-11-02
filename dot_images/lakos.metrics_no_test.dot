@@ -1,0 +1,292 @@
+digraph "" {
+  graph [style=rounded fontname="Arial Black" fontsize=13 penwidth=2.6];
+  node [shape=rect style="filled,rounded" fontname=Arial fontsize=15 fillcolor=Lavender penwidth=1.3];
+  edge [penwidth=1.3];
+  "/core/logger/logger.dart" [label="logger"];
+  "/core/repositories/test_repository/mock_test_service.dart" [label="mock_test_service"];
+  "/core/repositories/analytics_repository/mock_analytics_service.dart" [label="mock_analytics_service"];
+  "/core/blocs/app_bloc/app_bloc.dart" [label="app_bloc"];
+  "/core/blocs/app_bloc/app_state.dart" [label="app_state" shape=octagon];
+  "/core/blocs/app_bloc/app_event.dart" [label="app_event" shape=octagon];
+  "/core/blocs/analytics_bloc/analytics_bloc_cubit.dart" [label="analytics_bloc_cubit"];
+  "/core/blocs/analytics_bloc/analytics_bloc_state.dart" [label="analytics_bloc_state" shape=octagon];
+  "/core/blocs/search_bloc/search_event.dart" [label="search_event" shape=octagon];
+  "/core/blocs/search_bloc/search_state.dart" [label="search_state" shape=octagon];
+  "/core/blocs/search_bloc/search_bloc.dart" [label="search_bloc"];
+  "/core/blocs/tests_bloc/tests_event.dart" [label="tests_event" shape=octagon];
+  "/core/blocs/tests_bloc/tests_state.dart" [label="tests_state" shape=octagon];
+  "/core/blocs/tests_bloc/tests_bloc.dart" [label="tests_bloc"];
+  "/core/blocs/auth_cubit/auth_cubit.dart" [label="auth_cubit"];
+  "/core/blocs/auth_cubit/auth_state.dart" [label="auth_state" shape=octagon];
+  "/core/blocs/drawing_bloc/drawing_cubit.dart" [label="drawing_cubit"];
+  "/core/blocs/drawing_bloc/drawing_state.dart" [label="drawing_state" shape=octagon];
+  "/core/bloc/bloc_observer.dart" [label="bloc_observer"];
+  "/firebase_options.dart" [label="firebase_options"];
+  "/utils/fonts.dart" [label="fonts"];
+  "/utils/themes.dart" [label="themes"];
+  "/utils/resourses.dart" [label="resourses"];
+  "/main.dart" [label="main"];
+  "/data/repositories/test_repository.dart" [label="test_repository"];
+  "/data/repositories/analytics_repository.dart" [label="analytics_repository"];
+  "/domain/analytics_component/analytics_component.dart" [label="analytics_component"];
+  "/domain/drawing/figure.dart" [label="figure"];
+  "/domain/drawing/point.dart" [label="point"];
+  "/domain/test_item/test_item.cg.dart" [label="test_item.cg"];
+  "/domain/test_item/test_item.cg.g.dart" [label="test_item.cg.g" shape=octagon];
+  "/domain/analytics_item/analytics_item.cg.dart" [label="analytics_item.cg"];
+  "/domain/analytics_item/analytics_item.cg.freezed.dart" [label="analytics_item.cg.freezed" shape=octagon];
+  "/domain/search_providers/search_providers.dart" [label="search_providers"];
+  "/domain/app_screen_type/app_screen_type.dart" [label="app_screen_type"];
+  "/presentation/base_app/base_app.dart" [label="base_app"];
+  "/presentation/settings_screen/settings_screen.dart" [label="settings_screen"];
+  "/presentation/tests_screen/test_list_item.dart" [label="test_list_item"];
+  "/presentation/tests_screen/test_list_trailing.dart" [label="test_list_trailing"];
+  "/presentation/tests_screen/test_card_list_item.dart" [label="test_card_list_item"];
+  "/presentation/tests_screen/test_list.dart" [label="test_list"];
+  "/presentation/tests_screen/tests_screen.dart" [label="tests_screen"];
+  "/presentation/components/line_chart.dart" [label="line_chart"];
+  "/presentation/drawing_screen/drawing_buttons_row.dart" [label="drawing_buttons_row"];
+  "/presentation/drawing_screen/drawing_screen.dart" [label="drawing_screen"];
+  "/presentation/drawing_screen/deawing_canvas.dart" [label="deawing_canvas"];
+  "/presentation/analytics_screen/analytics_screen.dart" [label="analytics_screen"];
+  "/presentation/analytics_screen/analytics_list.dart" [label="analytics_list"];
+  "/presentation/analytics_screen/quick_analytics_screen.dart" [label="quick_analytics_screen"];
+  "/presentation/analytics_screen/analytics_list_item.dart" [label="analytics_list_item"];
+  "/presentation/main_screen/main_screen.dart" [label="main_screen"];
+  "/presentation/auth_screen/auth_screen.dart" [label="auth_screen"];
+  subgraph "cluster~" {
+    label="lib";
+    "/firebase_options.dart";
+    "/main.dart";
+    subgraph "cluster~/core" {
+      label="core";
+      subgraph "cluster~/core/logger" {
+        label="logger";
+        "/core/logger/logger.dart";
+      }
+      subgraph "cluster~/core/repositories" {
+        label="repositories";
+        subgraph "cluster~/core/repositories/test_repository" {
+          label="test_repository";
+          "/core/repositories/test_repository/mock_test_service.dart";
+        }
+        subgraph "cluster~/core/repositories/analytics_repository" {
+          label="analytics_repository";
+          "/core/repositories/analytics_repository/mock_analytics_service.dart";
+        }
+      }
+      subgraph "cluster~/core/blocs" {
+        label="blocs";
+        subgraph "cluster~/core/blocs/app_bloc" {
+          label="app_bloc";
+          "/core/blocs/app_bloc/app_bloc.dart";
+          "/core/blocs/app_bloc/app_state.dart";
+          "/core/blocs/app_bloc/app_event.dart";
+        }
+        subgraph "cluster~/core/blocs/analytics_bloc" {
+          label="analytics_bloc";
+          "/core/blocs/analytics_bloc/analytics_bloc_cubit.dart";
+          "/core/blocs/analytics_bloc/analytics_bloc_state.dart";
+        }
+        subgraph "cluster~/core/blocs/search_bloc" {
+          label="search_bloc";
+          "/core/blocs/search_bloc/search_event.dart";
+          "/core/blocs/search_bloc/search_state.dart";
+          "/core/blocs/search_bloc/search_bloc.dart";
+        }
+        subgraph "cluster~/core/blocs/tests_bloc" {
+          label="tests_bloc";
+          "/core/blocs/tests_bloc/tests_event.dart";
+          "/core/blocs/tests_bloc/tests_state.dart";
+          "/core/blocs/tests_bloc/tests_bloc.dart";
+        }
+        subgraph "cluster~/core/blocs/auth_cubit" {
+          label="auth_cubit";
+          "/core/blocs/auth_cubit/auth_cubit.dart";
+          "/core/blocs/auth_cubit/auth_state.dart";
+        }
+        subgraph "cluster~/core/blocs/drawing_bloc" {
+          label="drawing_bloc";
+          "/core/blocs/drawing_bloc/drawing_cubit.dart";
+          "/core/blocs/drawing_bloc/drawing_state.dart";
+        }
+      }
+      subgraph "cluster~/core/bloc" {
+        label="bloc";
+        "/core/bloc/bloc_observer.dart";
+      }
+    }
+    subgraph "cluster~/utils" {
+      label="utils";
+      "/utils/fonts.dart";
+      "/utils/themes.dart";
+      "/utils/resourses.dart";
+    }
+    subgraph "cluster~/data" {
+      label="data";
+      subgraph "cluster~/data/repositories" {
+        label="repositories";
+        "/data/repositories/test_repository.dart";
+        "/data/repositories/analytics_repository.dart";
+      }
+    }
+    subgraph "cluster~/domain" {
+      label="domain";
+      subgraph "cluster~/domain/analytics_component" {
+        label="analytics_component";
+        "/domain/analytics_component/analytics_component.dart";
+      }
+      subgraph "cluster~/domain/drawing" {
+        label="drawing";
+        "/domain/drawing/figure.dart";
+        "/domain/drawing/point.dart";
+      }
+      subgraph "cluster~/domain/test_item" {
+        label="test_item";
+        "/domain/test_item/test_item.cg.dart";
+        "/domain/test_item/test_item.cg.g.dart";
+      }
+      subgraph "cluster~/domain/analytics_item" {
+        label="analytics_item";
+        "/domain/analytics_item/analytics_item.cg.dart";
+        "/domain/analytics_item/analytics_item.cg.freezed.dart";
+      }
+      subgraph "cluster~/domain/search_providers" {
+        label="search_providers";
+        "/domain/search_providers/search_providers.dart";
+      }
+      subgraph "cluster~/domain/app_screen_type" {
+        label="app_screen_type";
+        "/domain/app_screen_type/app_screen_type.dart";
+      }
+    }
+    subgraph "cluster~/presentation" {
+      label="presentation";
+      subgraph "cluster~/presentation/base_app" {
+        label="base_app";
+        "/presentation/base_app/base_app.dart";
+      }
+      subgraph "cluster~/presentation/settings_screen" {
+        label="settings_screen";
+        "/presentation/settings_screen/settings_screen.dart";
+      }
+      subgraph "cluster~/presentation/tests_screen" {
+        label="tests_screen";
+        "/presentation/tests_screen/test_list_item.dart";
+        "/presentation/tests_screen/test_list_trailing.dart";
+        "/presentation/tests_screen/test_card_list_item.dart";
+        "/presentation/tests_screen/test_list.dart";
+        "/presentation/tests_screen/tests_screen.dart";
+      }
+      subgraph "cluster~/presentation/components" {
+        label="components";
+        "/presentation/components/line_chart.dart";
+      }
+      subgraph "cluster~/presentation/drawing_screen" {
+        label="drawing_screen";
+        "/presentation/drawing_screen/drawing_buttons_row.dart";
+        "/presentation/drawing_screen/drawing_screen.dart";
+        "/presentation/drawing_screen/deawing_canvas.dart";
+      }
+      subgraph "cluster~/presentation/analytics_screen" {
+        label="analytics_screen";
+        "/presentation/analytics_screen/analytics_screen.dart";
+        "/presentation/analytics_screen/analytics_list.dart";
+        "/presentation/analytics_screen/quick_analytics_screen.dart";
+        "/presentation/analytics_screen/analytics_list_item.dart";
+      }
+      subgraph "cluster~/presentation/main_screen" {
+        label="main_screen";
+        "/presentation/main_screen/main_screen.dart";
+      }
+      subgraph "cluster~/presentation/auth_screen" {
+        label="auth_screen";
+        "/presentation/auth_screen/auth_screen.dart";
+      }
+    }
+  }
+  "/core/repositories/test_repository/mock_test_service.dart" -> "/data/repositories/test_repository.dart";
+  "/core/repositories/test_repository/mock_test_service.dart" -> "/domain/test_item/test_item.cg.dart";
+  "/core/repositories/analytics_repository/mock_analytics_service.dart" -> "/data/repositories/analytics_repository.dart";
+  "/core/repositories/analytics_repository/mock_analytics_service.dart" -> "/domain/analytics_item/analytics_item.cg.dart";
+  "/core/blocs/app_bloc/app_bloc.dart" -> "/domain/app_screen_type/app_screen_type.dart";
+  "/core/blocs/analytics_bloc/analytics_bloc_cubit.dart" -> "/data/repositories/analytics_repository.dart";
+  "/core/blocs/analytics_bloc/analytics_bloc_cubit.dart" -> "/domain/analytics_item/analytics_item.cg.dart";
+  "/core/blocs/search_bloc/search_bloc.dart" -> "/domain/search_providers/search_providers.dart";
+  "/core/blocs/tests_bloc/tests_bloc.dart" -> "/data/repositories/test_repository.dart";
+  "/core/blocs/tests_bloc/tests_bloc.dart" -> "/domain/test_item/test_item.cg.dart";
+  "/core/blocs/drawing_bloc/drawing_cubit.dart" -> "/data/repositories/analytics_repository.dart";
+  "/core/blocs/drawing_bloc/drawing_cubit.dart" -> "/domain/analytics_component/analytics_component.dart";
+  "/core/blocs/drawing_bloc/drawing_cubit.dart" -> "/domain/analytics_item/analytics_item.cg.dart";
+  "/core/blocs/drawing_bloc/drawing_cubit.dart" -> "/domain/drawing/point.dart";
+  "/core/bloc/bloc_observer.dart" -> "/core/logger/logger.dart";
+  "/utils/themes.dart" -> "/utils/fonts.dart";
+  "/main.dart" -> "/core/bloc/bloc_observer.dart";
+  "/main.dart" -> "/firebase_options.dart";
+  "/main.dart" -> "/presentation/base_app/base_app.dart";
+  "/main.dart" -> "/core/logger/logger.dart";
+  "/data/repositories/test_repository.dart" -> "/domain/test_item/test_item.cg.dart";
+  "/data/repositories/analytics_repository.dart" -> "/domain/analytics_item/analytics_item.cg.dart";
+  "/domain/analytics_component/analytics_component.dart" -> "/domain/analytics_item/analytics_item.cg.dart";
+  "/domain/analytics_component/analytics_component.dart" -> "/domain/drawing/point.dart";
+  "/domain/drawing/figure.dart" -> "/domain/drawing/point.dart";
+  "/domain/test_item/test_item.cg.dart" -> "/domain/drawing/point.dart";
+  "/presentation/base_app/base_app.dart" -> "/core/blocs/app_bloc/app_bloc.dart";
+  "/presentation/base_app/base_app.dart" -> "/core/blocs/auth_cubit/auth_cubit.dart";
+  "/presentation/base_app/base_app.dart" -> "/core/repositories/analytics_repository/mock_analytics_service.dart";
+  "/presentation/base_app/base_app.dart" -> "/core/repositories/test_repository/mock_test_service.dart";
+  "/presentation/base_app/base_app.dart" -> "/data/repositories/analytics_repository.dart";
+  "/presentation/base_app/base_app.dart" -> "/data/repositories/test_repository.dart";
+  "/presentation/base_app/base_app.dart" -> "/presentation/main_screen/main_screen.dart";
+  "/presentation/base_app/base_app.dart" -> "/utils/resourses.dart";
+  "/presentation/base_app/base_app.dart" -> "/utils/themes.dart";
+  "/presentation/settings_screen/settings_screen.dart" -> "/core/blocs/auth_cubit/auth_cubit.dart";
+  "/presentation/tests_screen/test_list_item.dart" -> "/domain/test_item/test_item.cg.dart";
+  "/presentation/tests_screen/test_list_item.dart" -> "/utils/fonts.dart";
+  "/presentation/tests_screen/test_list_item.dart" -> "/utils/resourses.dart";
+  "/presentation/tests_screen/test_card_list_item.dart" -> "/domain/test_item/test_item.cg.dart";
+  "/presentation/tests_screen/test_card_list_item.dart" -> "/presentation/tests_screen/test_list_item.dart";
+  "/presentation/tests_screen/test_card_list_item.dart" -> "/presentation/tests_screen/test_list_trailing.dart";
+  "/presentation/tests_screen/test_card_list_item.dart" -> "/utils/fonts.dart";
+  "/presentation/tests_screen/test_list.dart" -> "/core/blocs/tests_bloc/tests_bloc.dart";
+  "/presentation/tests_screen/test_list.dart" -> "/domain/test_item/test_item.cg.dart";
+  "/presentation/tests_screen/test_list.dart" -> "/presentation/tests_screen/test_card_list_item.dart";
+  "/presentation/tests_screen/test_list.dart" -> "/presentation/tests_screen/test_list_item.dart";
+  "/presentation/tests_screen/tests_screen.dart" -> "/core/blocs/tests_bloc/tests_bloc.dart";
+  "/presentation/tests_screen/tests_screen.dart" -> "/domain/test_item/test_item.cg.dart";
+  "/presentation/tests_screen/tests_screen.dart" -> "/presentation/drawing_screen/drawing_screen.dart";
+  "/presentation/tests_screen/tests_screen.dart" -> "/presentation/tests_screen/test_list.dart";
+  "/presentation/tests_screen/tests_screen.dart" -> "/utils/resourses.dart";
+  "/presentation/drawing_screen/drawing_screen.dart" -> "/core/blocs/drawing_bloc/drawing_cubit.dart";
+  "/presentation/drawing_screen/drawing_screen.dart" -> "/core/logger/logger.dart";
+  "/presentation/drawing_screen/drawing_screen.dart" -> "/domain/test_item/test_item.cg.dart";
+  "/presentation/drawing_screen/drawing_screen.dart" -> "/presentation/analytics_screen/quick_analytics_screen.dart";
+  "/presentation/drawing_screen/drawing_screen.dart" -> "/presentation/drawing_screen/deawing_canvas.dart";
+  "/presentation/drawing_screen/drawing_screen.dart" -> "/presentation/drawing_screen/drawing_buttons_row.dart";
+  "/presentation/drawing_screen/deawing_canvas.dart" -> "/core/blocs/drawing_bloc/drawing_cubit.dart";
+  "/presentation/drawing_screen/deawing_canvas.dart" -> "/domain/drawing/point.dart";
+  "/presentation/analytics_screen/analytics_screen.dart" -> "/core/blocs/analytics_bloc/analytics_bloc_cubit.dart";
+  "/presentation/analytics_screen/analytics_screen.dart" -> "/presentation/analytics_screen/analytics_list.dart";
+  "/presentation/analytics_screen/analytics_screen.dart" -> "/utils/resourses.dart";
+  "/presentation/analytics_screen/analytics_list.dart" -> "/domain/analytics_item/analytics_item.cg.dart";
+  "/presentation/analytics_screen/analytics_list.dart" -> "/presentation/analytics_screen/analytics_list_item.dart";
+  "/presentation/analytics_screen/quick_analytics_screen.dart" -> "/domain/analytics_item/analytics_item.cg.dart";
+  "/presentation/analytics_screen/quick_analytics_screen.dart" -> "/domain/test_item/test_item.cg.dart";
+  "/presentation/analytics_screen/quick_analytics_screen.dart" -> "/utils/fonts.dart";
+  "/presentation/analytics_screen/analytics_list_item.dart" -> "/domain/analytics_item/analytics_item.cg.dart";
+  "/presentation/analytics_screen/analytics_list_item.dart" -> "/domain/test_item/test_item.cg.dart";
+  "/presentation/analytics_screen/analytics_list_item.dart" -> "/presentation/analytics_screen/quick_analytics_screen.dart";
+  "/presentation/analytics_screen/analytics_list_item.dart" -> "/presentation/components/line_chart.dart";
+  "/presentation/analytics_screen/analytics_list_item.dart" -> "/presentation/tests_screen/test_list_item.dart";
+  "/presentation/analytics_screen/analytics_list_item.dart" -> "/presentation/tests_screen/test_list_trailing.dart";
+  "/presentation/analytics_screen/analytics_list_item.dart" -> "/utils/fonts.dart";
+  "/presentation/main_screen/main_screen.dart" -> "/core/blocs/app_bloc/app_bloc.dart";
+  "/presentation/main_screen/main_screen.dart" -> "/core/logger/logger.dart";
+  "/presentation/main_screen/main_screen.dart" -> "/domain/app_screen_type/app_screen_type.dart";
+  "/presentation/main_screen/main_screen.dart" -> "/presentation/analytics_screen/analytics_screen.dart";
+  "/presentation/main_screen/main_screen.dart" -> "/presentation/auth_screen/auth_screen.dart";
+  "/presentation/main_screen/main_screen.dart" -> "/presentation/settings_screen/settings_screen.dart";
+  "/presentation/main_screen/main_screen.dart" -> "/presentation/tests_screen/tests_screen.dart";
+  "/presentation/auth_screen/auth_screen.dart" -> "/core/blocs/auth_cubit/auth_cubit.dart";
+  "metrics" [label=" isAcyclic: true \l numNodes: 52  \l numEdges: 83  \l avgDegree: 1.6 \l numOrphans: 11 \l ccd: 270 \l acd: 5.19 \l nccd: 1.07 \l totalSloc: 2834 \l avgSloc: 54.5 \l"];
+}
